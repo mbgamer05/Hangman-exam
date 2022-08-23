@@ -412,11 +412,10 @@
             // picBase
             // 
             this.picBase.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.picBase.ErrorImage = null;
-            this.picBase.Location = new System.Drawing.Point(141, 190);
+            this.picBase.Location = new System.Drawing.Point(157, 185);
             this.picBase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBase.Name = "picBase";
-            this.picBase.Size = new System.Drawing.Size(124, 22);
+            this.picBase.Size = new System.Drawing.Size(124, 27);
             this.picBase.TabIndex = 30;
             this.picBase.TabStop = false;
             this.picBase.Tag = "Hangman";
@@ -427,7 +426,7 @@
             this.picStand.Location = new System.Drawing.Point(197, 54);
             this.picStand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStand.Name = "picStand";
-            this.picStand.Size = new System.Drawing.Size(18, 158);
+            this.picStand.Size = new System.Drawing.Size(39, 158);
             this.picStand.TabIndex = 31;
             this.picStand.TabStop = false;
             this.picStand.Tag = "Hangman";
@@ -438,7 +437,7 @@
             this.picTop.Location = new System.Drawing.Point(197, 54);
             this.picTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picTop.Name = "picTop";
-            this.picTop.Size = new System.Drawing.Size(110, 16);
+            this.picTop.Size = new System.Drawing.Size(131, 31);
             this.picTop.TabIndex = 32;
             this.picTop.TabStop = false;
             this.picTop.Tag = "Hangman";
@@ -446,7 +445,7 @@
             // picHead
             // 
             this.picHead.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.picHead.Location = new System.Drawing.Point(274, 74);
+            this.picHead.Location = new System.Drawing.Point(295, 91);
             this.picHead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picHead.Name = "picHead";
             this.picHead.Size = new System.Drawing.Size(33, 30);
@@ -457,7 +456,7 @@
             // picBody
             // 
             this.picBody.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picBody.Location = new System.Drawing.Point(284, 101);
+            this.picBody.Location = new System.Drawing.Point(305, 118);
             this.picBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBody.Name = "picBody";
             this.picBody.Size = new System.Drawing.Size(12, 60);
@@ -468,7 +467,7 @@
             // picArms
             // 
             this.picArms.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picArms.Location = new System.Drawing.Point(274, 110);
+            this.picArms.Location = new System.Drawing.Point(295, 127);
             this.picArms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picArms.Name = "picArms";
             this.picArms.Size = new System.Drawing.Size(33, 15);
@@ -479,7 +478,7 @@
             // picLegs
             // 
             this.picLegs.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picLegs.Location = new System.Drawing.Point(259, 146);
+            this.picLegs.Location = new System.Drawing.Point(280, 162);
             this.picLegs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLegs.Name = "picLegs";
             this.picLegs.Size = new System.Drawing.Size(63, 15);
@@ -490,7 +489,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 9);
+            this.label1.Location = new System.Drawing.Point(33, 12);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
@@ -500,7 +499,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 25);
+            this.label2.Location = new System.Drawing.Point(33, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 38;
@@ -508,22 +507,20 @@
             // 
             // picSupport
             // 
-            this.picSupport.BackColor = System.Drawing.Color.Transparent;
-            this.picSupport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.picSupport.Image = ((System.Drawing.Image)(resources.GetObject("picSupport.Image")));
-            this.picSupport.Location = new System.Drawing.Point(197, 54);
+            this.picSupport.Location = new System.Drawing.Point(213, 71);
             this.picSupport.Name = "picSupport";
-            this.picSupport.Size = new System.Drawing.Size(61, 55);
+            this.picSupport.Size = new System.Drawing.Size(70, 71);
             this.picSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSupport.TabIndex = 39;
             this.picSupport.TabStop = false;
             this.picSupport.Tag = "Hangman";
+            this.picSupport.Click += new System.EventHandler(this.picSupport_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(781, 682);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -620,4 +617,3 @@
         private System.Windows.Forms.PictureBox picSupport;
     }
 }
-

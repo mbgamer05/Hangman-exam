@@ -35,11 +35,11 @@ namespace Hangman_exam
             TESTLABEL.Visible = false;
 
             //gets the users name and sets the name variable to the response
-            name = Interaction.InputBox("Please enter your name ", "Welcome","", 10, 10);
+            name = Interaction.InputBox("Please enter your name ", "Welcome", "", 10, 10);
             Console.WriteLine(name);
             Console.ReadLine();
             label1.Text = "NAME - " + name;
-            
+
 
             List<PictureBox> Hangman = new List<PictureBox>();
             foreach (PictureBox pictureBox in Controls.OfType<PictureBox>())
@@ -49,9 +49,9 @@ namespace Hangman_exam
                     Hangman.Add(pictureBox);
                 }
             }
-            foreach(PictureBox pictureBox in Hangman)
+            foreach (PictureBox pictureBox in Hangman)
             {
-                pictureBox.Visible=false;
+                pictureBox.Visible = false;
             } //hides the picture boxes on start
 
             //top row of keyboard
@@ -149,7 +149,7 @@ namespace Hangman_exam
                     if (randomWord[i] == check)
                     {
                         PlaceHoldersToChange[i].Text = letter;
-                    }           
+                    }
                 }
                 for (int i = 0; i < randomWord.Length; i++) //checks if the placeholder doesn't equal what it use to be 
                 {
@@ -286,7 +286,7 @@ namespace Hangman_exam
                 {
                     //DialogResult allows the user to select two different options when completeing a challenge
                     DialogResult dr = MessageBox.Show("You lasted the longest with a score of " + score + " Well done your score is saved to an external file, Play again?", "the word was " + randomWord, MessageBoxButtons.YesNo);
-                    
+
                     switch (dr)
                     {
                         case DialogResult.Yes: //if yes the program will reset it's self
@@ -310,7 +310,7 @@ namespace Hangman_exam
                             break;
                     }
                 }
-                
+
             }
             if (Reset == true) //resetes the buttons and makes sure that they are enabled after the correct word is entered
             {
@@ -403,6 +403,11 @@ namespace Hangman_exam
             {
                 button.Visible = true;
             }
+
+        }
+
+        private void picSupport_Click(object sender, EventArgs e)
+        {
 
         }
     }
