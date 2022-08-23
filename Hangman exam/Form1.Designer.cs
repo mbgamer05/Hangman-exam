@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnStart = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnQ = new System.Windows.Forms.Button();
             this.btnW = new System.Windows.Forms.Button();
             this.btnE = new System.Windows.Forms.Button();
@@ -66,6 +66,7 @@
             this.picLegs = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.picSupport = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picStand)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTop)).BeginInit();
@@ -73,25 +74,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBody)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLegs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSupport)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(9, 10);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(63, 32);
-            this.btnStart.TabIndex = 0;
-            this.btnStart.Text = "Generate Word";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnQ
             // 
-            this.btnQ.Location = new System.Drawing.Point(106, 405);
-            this.btnQ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQ.Location = new System.Drawing.Point(141, 498);
+            this.btnQ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQ.Name = "btnQ";
-            this.btnQ.Size = new System.Drawing.Size(36, 41);
+            this.btnQ.Size = new System.Drawing.Size(48, 50);
             this.btnQ.TabIndex = 1;
             this.btnQ.Tag = "TopRow";
             this.btnQ.Text = "Q";
@@ -100,10 +91,10 @@
             // 
             // btnW
             // 
-            this.btnW.Location = new System.Drawing.Point(141, 405);
-            this.btnW.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnW.Location = new System.Drawing.Point(188, 498);
+            this.btnW.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnW.Name = "btnW";
-            this.btnW.Size = new System.Drawing.Size(36, 41);
+            this.btnW.Size = new System.Drawing.Size(48, 50);
             this.btnW.TabIndex = 2;
             this.btnW.Tag = "TopRow";
             this.btnW.Text = "W";
@@ -112,10 +103,10 @@
             // 
             // btnE
             // 
-            this.btnE.Location = new System.Drawing.Point(176, 405);
-            this.btnE.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnE.Location = new System.Drawing.Point(235, 498);
+            this.btnE.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnE.Name = "btnE";
-            this.btnE.Size = new System.Drawing.Size(36, 41);
+            this.btnE.Size = new System.Drawing.Size(48, 50);
             this.btnE.TabIndex = 3;
             this.btnE.Tag = "TopRow";
             this.btnE.Text = "E";
@@ -124,10 +115,10 @@
             // 
             // btnR
             // 
-            this.btnR.Location = new System.Drawing.Point(210, 405);
-            this.btnR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnR.Location = new System.Drawing.Point(280, 498);
+            this.btnR.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnR.Name = "btnR";
-            this.btnR.Size = new System.Drawing.Size(36, 41);
+            this.btnR.Size = new System.Drawing.Size(48, 50);
             this.btnR.TabIndex = 4;
             this.btnR.Tag = "TopRow";
             this.btnR.Text = "R";
@@ -136,10 +127,10 @@
             // 
             // btnT
             // 
-            this.btnT.Location = new System.Drawing.Point(244, 405);
-            this.btnT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnT.Location = new System.Drawing.Point(325, 498);
+            this.btnT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnT.Name = "btnT";
-            this.btnT.Size = new System.Drawing.Size(36, 41);
+            this.btnT.Size = new System.Drawing.Size(48, 50);
             this.btnT.TabIndex = 5;
             this.btnT.Tag = "TopRow";
             this.btnT.Text = "T";
@@ -148,10 +139,10 @@
             // 
             // btnY
             // 
-            this.btnY.Location = new System.Drawing.Point(279, 405);
-            this.btnY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY.Location = new System.Drawing.Point(372, 498);
+            this.btnY.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnY.Name = "btnY";
-            this.btnY.Size = new System.Drawing.Size(36, 41);
+            this.btnY.Size = new System.Drawing.Size(48, 50);
             this.btnY.TabIndex = 6;
             this.btnY.Tag = "TopRow";
             this.btnY.Text = "Y";
@@ -160,10 +151,10 @@
             // 
             // btnU
             // 
-            this.btnU.Location = new System.Drawing.Point(314, 405);
-            this.btnU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnU.Location = new System.Drawing.Point(419, 498);
+            this.btnU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnU.Name = "btnU";
-            this.btnU.Size = new System.Drawing.Size(36, 41);
+            this.btnU.Size = new System.Drawing.Size(48, 50);
             this.btnU.TabIndex = 7;
             this.btnU.Tag = "TopRow";
             this.btnU.Text = "U";
@@ -172,10 +163,10 @@
             // 
             // btnP
             // 
-            this.btnP.Location = new System.Drawing.Point(417, 405);
-            this.btnP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnP.Location = new System.Drawing.Point(556, 498);
+            this.btnP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(36, 41);
+            this.btnP.Size = new System.Drawing.Size(48, 50);
             this.btnP.TabIndex = 10;
             this.btnP.Tag = "TopRow";
             this.btnP.Text = "P";
@@ -184,10 +175,10 @@
             // 
             // btnO
             // 
-            this.btnO.Location = new System.Drawing.Point(382, 405);
-            this.btnO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnO.Location = new System.Drawing.Point(509, 498);
+            this.btnO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnO.Name = "btnO";
-            this.btnO.Size = new System.Drawing.Size(36, 41);
+            this.btnO.Size = new System.Drawing.Size(48, 50);
             this.btnO.TabIndex = 9;
             this.btnO.Tag = "TopRow";
             this.btnO.Text = "O";
@@ -196,10 +187,10 @@
             // 
             // btnI
             // 
-            this.btnI.Location = new System.Drawing.Point(348, 405);
-            this.btnI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnI.Location = new System.Drawing.Point(464, 498);
+            this.btnI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnI.Name = "btnI";
-            this.btnI.Size = new System.Drawing.Size(36, 41);
+            this.btnI.Size = new System.Drawing.Size(48, 50);
             this.btnI.TabIndex = 8;
             this.btnI.Tag = "TopRow";
             this.btnI.Text = "I";
@@ -208,10 +199,10 @@
             // 
             // btnL
             // 
-            this.btnL.Location = new System.Drawing.Point(401, 442);
-            this.btnL.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnL.Location = new System.Drawing.Point(535, 544);
+            this.btnL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnL.Name = "btnL";
-            this.btnL.Size = new System.Drawing.Size(36, 41);
+            this.btnL.Size = new System.Drawing.Size(48, 50);
             this.btnL.TabIndex = 19;
             this.btnL.Tag = "MiddleRow";
             this.btnL.Text = "L";
@@ -220,10 +211,10 @@
             // 
             // btnK
             // 
-            this.btnK.Location = new System.Drawing.Point(367, 442);
-            this.btnK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnK.Location = new System.Drawing.Point(489, 544);
+            this.btnK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnK.Name = "btnK";
-            this.btnK.Size = new System.Drawing.Size(36, 41);
+            this.btnK.Size = new System.Drawing.Size(48, 50);
             this.btnK.TabIndex = 18;
             this.btnK.Tag = "MiddleRow";
             this.btnK.Text = "K";
@@ -232,10 +223,10 @@
             // 
             // btnJ
             // 
-            this.btnJ.Location = new System.Drawing.Point(332, 442);
-            this.btnJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJ.Location = new System.Drawing.Point(443, 544);
+            this.btnJ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJ.Name = "btnJ";
-            this.btnJ.Size = new System.Drawing.Size(36, 41);
+            this.btnJ.Size = new System.Drawing.Size(48, 50);
             this.btnJ.TabIndex = 17;
             this.btnJ.Tag = "MiddleRow";
             this.btnJ.Text = "J";
@@ -244,10 +235,10 @@
             // 
             // btnH
             // 
-            this.btnH.Location = new System.Drawing.Point(298, 442);
-            this.btnH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnH.Location = new System.Drawing.Point(397, 544);
+            this.btnH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnH.Name = "btnH";
-            this.btnH.Size = new System.Drawing.Size(36, 41);
+            this.btnH.Size = new System.Drawing.Size(48, 50);
             this.btnH.TabIndex = 16;
             this.btnH.Tag = "MiddleRow";
             this.btnH.Text = "H";
@@ -256,10 +247,10 @@
             // 
             // btnG
             // 
-            this.btnG.Location = new System.Drawing.Point(263, 442);
-            this.btnG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnG.Location = new System.Drawing.Point(351, 544);
+            this.btnG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnG.Name = "btnG";
-            this.btnG.Size = new System.Drawing.Size(36, 41);
+            this.btnG.Size = new System.Drawing.Size(48, 50);
             this.btnG.TabIndex = 15;
             this.btnG.Tag = "MiddleRow";
             this.btnG.Text = "G";
@@ -268,10 +259,10 @@
             // 
             // btnF
             // 
-            this.btnF.Location = new System.Drawing.Point(229, 442);
-            this.btnF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnF.Location = new System.Drawing.Point(305, 544);
+            this.btnF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnF.Name = "btnF";
-            this.btnF.Size = new System.Drawing.Size(36, 41);
+            this.btnF.Size = new System.Drawing.Size(48, 50);
             this.btnF.TabIndex = 14;
             this.btnF.Tag = "MiddleRow";
             this.btnF.Text = "F";
@@ -280,10 +271,10 @@
             // 
             // btnD
             // 
-            this.btnD.Location = new System.Drawing.Point(194, 442);
-            this.btnD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnD.Location = new System.Drawing.Point(259, 544);
+            this.btnD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnD.Name = "btnD";
-            this.btnD.Size = new System.Drawing.Size(36, 41);
+            this.btnD.Size = new System.Drawing.Size(48, 50);
             this.btnD.TabIndex = 13;
             this.btnD.Tag = "MiddleRow";
             this.btnD.Text = "D";
@@ -292,10 +283,10 @@
             // 
             // btnS
             // 
-            this.btnS.Location = new System.Drawing.Point(160, 442);
-            this.btnS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnS.Location = new System.Drawing.Point(213, 544);
+            this.btnS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(36, 41);
+            this.btnS.Size = new System.Drawing.Size(48, 50);
             this.btnS.TabIndex = 12;
             this.btnS.Tag = "MiddleRow";
             this.btnS.Text = "S";
@@ -304,10 +295,10 @@
             // 
             // btnA
             // 
-            this.btnA.Location = new System.Drawing.Point(125, 442);
-            this.btnA.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnA.Location = new System.Drawing.Point(167, 544);
+            this.btnA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnA.Name = "btnA";
-            this.btnA.Size = new System.Drawing.Size(36, 41);
+            this.btnA.Size = new System.Drawing.Size(48, 50);
             this.btnA.TabIndex = 11;
             this.btnA.Tag = "MiddleRow";
             this.btnA.Text = "A";
@@ -316,10 +307,10 @@
             // 
             // btnM
             // 
-            this.btnM.Location = new System.Drawing.Point(359, 479);
-            this.btnM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnM.Location = new System.Drawing.Point(479, 590);
+            this.btnM.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnM.Name = "btnM";
-            this.btnM.Size = new System.Drawing.Size(36, 41);
+            this.btnM.Size = new System.Drawing.Size(48, 50);
             this.btnM.TabIndex = 26;
             this.btnM.Tag = "BottomRow";
             this.btnM.Text = "M";
@@ -328,10 +319,10 @@
             // 
             // btnN
             // 
-            this.btnN.Location = new System.Drawing.Point(325, 479);
-            this.btnN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnN.Location = new System.Drawing.Point(433, 590);
+            this.btnN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnN.Name = "btnN";
-            this.btnN.Size = new System.Drawing.Size(36, 41);
+            this.btnN.Size = new System.Drawing.Size(48, 50);
             this.btnN.TabIndex = 25;
             this.btnN.Tag = "BottomRow";
             this.btnN.Text = "N";
@@ -340,10 +331,10 @@
             // 
             // btnB
             // 
-            this.btnB.Location = new System.Drawing.Point(290, 479);
-            this.btnB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnB.Location = new System.Drawing.Point(387, 590);
+            this.btnB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnB.Name = "btnB";
-            this.btnB.Size = new System.Drawing.Size(36, 41);
+            this.btnB.Size = new System.Drawing.Size(48, 50);
             this.btnB.TabIndex = 24;
             this.btnB.Tag = "BottomRow";
             this.btnB.Text = "B";
@@ -352,10 +343,10 @@
             // 
             // btnV
             // 
-            this.btnV.Location = new System.Drawing.Point(256, 479);
-            this.btnV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnV.Location = new System.Drawing.Point(341, 590);
+            this.btnV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnV.Name = "btnV";
-            this.btnV.Size = new System.Drawing.Size(36, 41);
+            this.btnV.Size = new System.Drawing.Size(48, 50);
             this.btnV.TabIndex = 23;
             this.btnV.Tag = "BottomRow";
             this.btnV.Text = "V";
@@ -364,10 +355,10 @@
             // 
             // btnC
             // 
-            this.btnC.Location = new System.Drawing.Point(221, 479);
-            this.btnC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnC.Location = new System.Drawing.Point(295, 590);
+            this.btnC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(36, 41);
+            this.btnC.Size = new System.Drawing.Size(48, 50);
             this.btnC.TabIndex = 22;
             this.btnC.Tag = "BottomRow";
             this.btnC.Text = "C";
@@ -376,10 +367,10 @@
             // 
             // btnX
             // 
-            this.btnX.Location = new System.Drawing.Point(187, 479);
-            this.btnX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX.Location = new System.Drawing.Point(249, 590);
+            this.btnX.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(36, 41);
+            this.btnX.Size = new System.Drawing.Size(48, 50);
             this.btnX.TabIndex = 21;
             this.btnX.Tag = "BottomRow";
             this.btnX.Text = "X";
@@ -388,10 +379,10 @@
             // 
             // btnZ
             // 
-            this.btnZ.Location = new System.Drawing.Point(152, 479);
-            this.btnZ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnZ.Location = new System.Drawing.Point(203, 590);
+            this.btnZ.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnZ.Name = "btnZ";
-            this.btnZ.Size = new System.Drawing.Size(36, 41);
+            this.btnZ.Size = new System.Drawing.Size(48, 50);
             this.btnZ.TabIndex = 20;
             this.btnZ.Tag = "BottomRow";
             this.btnZ.Text = "Z";
@@ -401,20 +392,19 @@
             // TESTLABEL
             // 
             this.TESTLABEL.AutoSize = true;
-            this.TESTLABEL.Location = new System.Drawing.Point(25, 44);
-            this.TESTLABEL.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TESTLABEL.Location = new System.Drawing.Point(33, 54);
             this.TESTLABEL.Name = "TESTLABEL";
-            this.TESTLABEL.Size = new System.Drawing.Size(35, 13);
+            this.TESTLABEL.Size = new System.Drawing.Size(44, 16);
             this.TESTLABEL.TabIndex = 28;
             this.TESTLABEL.Text = "label1";
             this.TESTLABEL.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnLaunch
             // 
-            this.btnLaunch.Location = new System.Drawing.Point(176, 154);
-            this.btnLaunch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLaunch.Location = new System.Drawing.Point(235, 190);
+            this.btnLaunch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLaunch.Name = "btnLaunch";
-            this.btnLaunch.Size = new System.Drawing.Size(218, 78);
+            this.btnLaunch.Size = new System.Drawing.Size(291, 96);
             this.btnLaunch.TabIndex = 29;
             this.btnLaunch.Text = "Start";
             this.btnLaunch.UseVisualStyleBackColor = true;
@@ -423,10 +413,10 @@
             // picBase
             // 
             this.picBase.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.picBase.Location = new System.Drawing.Point(118, 150);
-            this.picBase.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBase.Location = new System.Drawing.Point(157, 185);
+            this.picBase.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBase.Name = "picBase";
-            this.picBase.Size = new System.Drawing.Size(93, 22);
+            this.picBase.Size = new System.Drawing.Size(124, 27);
             this.picBase.TabIndex = 30;
             this.picBase.TabStop = false;
             this.picBase.Tag = "Hangman";
@@ -434,10 +424,10 @@
             // picStand
             // 
             this.picStand.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.picStand.Location = new System.Drawing.Point(148, 44);
-            this.picStand.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picStand.Location = new System.Drawing.Point(197, 54);
+            this.picStand.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picStand.Name = "picStand";
-            this.picStand.Size = new System.Drawing.Size(29, 128);
+            this.picStand.Size = new System.Drawing.Size(39, 158);
             this.picStand.TabIndex = 31;
             this.picStand.TabStop = false;
             this.picStand.Tag = "Hangman";
@@ -445,10 +435,10 @@
             // picTop
             // 
             this.picTop.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.picTop.Location = new System.Drawing.Point(148, 44);
-            this.picTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picTop.Location = new System.Drawing.Point(197, 54);
+            this.picTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picTop.Name = "picTop";
-            this.picTop.Size = new System.Drawing.Size(98, 25);
+            this.picTop.Size = new System.Drawing.Size(131, 31);
             this.picTop.TabIndex = 32;
             this.picTop.TabStop = false;
             this.picTop.Tag = "Hangman";
@@ -456,10 +446,10 @@
             // picHead
             // 
             this.picHead.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.picHead.Location = new System.Drawing.Point(221, 74);
-            this.picHead.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picHead.Location = new System.Drawing.Point(295, 91);
+            this.picHead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picHead.Name = "picHead";
-            this.picHead.Size = new System.Drawing.Size(25, 24);
+            this.picHead.Size = new System.Drawing.Size(33, 30);
             this.picHead.TabIndex = 33;
             this.picHead.TabStop = false;
             this.picHead.Tag = "Hangman";
@@ -467,10 +457,10 @@
             // picBody
             // 
             this.picBody.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picBody.Location = new System.Drawing.Point(229, 96);
-            this.picBody.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBody.Location = new System.Drawing.Point(305, 118);
+            this.picBody.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBody.Name = "picBody";
-            this.picBody.Size = new System.Drawing.Size(9, 49);
+            this.picBody.Size = new System.Drawing.Size(12, 60);
             this.picBody.TabIndex = 34;
             this.picBody.TabStop = false;
             this.picBody.Tag = "Hangman";
@@ -478,10 +468,10 @@
             // picArms
             // 
             this.picArms.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picArms.Location = new System.Drawing.Point(221, 103);
-            this.picArms.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picArms.Location = new System.Drawing.Point(295, 127);
+            this.picArms.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picArms.Name = "picArms";
-            this.picArms.Size = new System.Drawing.Size(25, 12);
+            this.picArms.Size = new System.Drawing.Size(33, 15);
             this.picArms.TabIndex = 35;
             this.picArms.TabStop = false;
             this.picArms.Tag = "Hangman";
@@ -489,10 +479,10 @@
             // picLegs
             // 
             this.picLegs.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.picLegs.Location = new System.Drawing.Point(210, 132);
-            this.picLegs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picLegs.Location = new System.Drawing.Point(280, 162);
+            this.picLegs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picLegs.Name = "picLegs";
-            this.picLegs.Size = new System.Drawing.Size(47, 12);
+            this.picLegs.Size = new System.Drawing.Size(63, 15);
             this.picLegs.TabIndex = 36;
             this.picLegs.TabStop = false;
             this.picLegs.Tag = "Hangman";
@@ -500,27 +490,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(77, 10);
+            this.label1.Location = new System.Drawing.Point(34, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(44, 16);
             this.label1.TabIndex = 37;
             this.label1.Text = "Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 23);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(34, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(43, 16);
             this.label2.TabIndex = 38;
             this.label2.Text = "Score";
             // 
+            // picSupport
+            // 
+            this.picSupport.Image = ((System.Drawing.Image)(resources.GetObject("picSupport.Image")));
+            this.picSupport.Location = new System.Drawing.Point(207, 71);
+            this.picSupport.Name = "picSupport";
+            this.picSupport.Size = new System.Drawing.Size(82, 60);
+            this.picSupport.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSupport.TabIndex = 39;
+            this.picSupport.TabStop = false;
+            this.picSupport.Tag = "Hangman";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(586, 554);
+            this.ClientSize = new System.Drawing.Size(781, 682);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picLegs);
@@ -558,8 +559,8 @@
             this.Controls.Add(this.btnE);
             this.Controls.Add(this.btnW);
             this.Controls.Add(this.btnQ);
-            this.Controls.Add(this.btnStart);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.picSupport);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -570,14 +571,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBody)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picArms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLegs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSupport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnQ;
         private System.Windows.Forms.Button btnW;
         private System.Windows.Forms.Button btnE;
@@ -615,6 +615,7 @@
         private System.Windows.Forms.PictureBox picLegs;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox picSupport;
     }
 }
 

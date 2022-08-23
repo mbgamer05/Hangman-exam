@@ -15,35 +15,31 @@ namespace Hangman_exam
 {
     public partial class Form1 : Form
     {
-
-        const string path = "wordList.txt";
-        string SCORE = "HIGHSCORE.txt";
-        string randomWord = "";
-        int TopRowLeft = 430; //is how far the x value of the row is displaced
-        int MiddleRowLeft = 405;
-        int BottomRowLeft = 350;
+        const string path = "wordList.txt"; //what the word list is called
+        string SCORE = "HIGHSCORE.txt"; //what the highscore list is called
+        string randomWord = ""; //where the random word is stored
+        int TopRowLeft = 430;    //is how far the x value of the row is displaced
+        int MiddleRowLeft = 405; //is how far the x value of the row is displaced
+        int BottomRowLeft = 350; //is how far the x value of the row is displaced
         int score = 0; //how many rounds the player lasted
         int round = 0; //the round which checks how many lives are left
-        bool fail = false;
-        string name = "";
-        int Reset = 0;
-
+        bool fail = false;  //if true the game ends
+        bool Reset = false; //if true the buttons enable again
+        string name = ""; //name stores the players name
 
         public Form1()
         {
             InitializeComponent();
-            this.Height = 400;
+            this.Height = 400; //set the size of the form
             this.Width = 600;
-            btnStart.Hide();
             TESTLABEL.Visible = false;
 
-            //DialogResult = MessageBox.Show ("Welcome please enter your name", MessageBoxButtons.)
-
-            name = Interaction.InputBox("Please enter your name ", "Welcome","", 10, 10);
+            //gets the users name and sets the name variable to the response
+            name = Interaction.InputBox("Please enter your name ", "Welcome", "", 10, 10);
             Console.WriteLine(name);
             Console.ReadLine();
             label1.Text = "NAME - " + name;
-            
+
 
             List<PictureBox> Hangman = new List<PictureBox>();
             foreach (PictureBox pictureBox in Controls.OfType<PictureBox>())
@@ -53,9 +49,9 @@ namespace Hangman_exam
                     Hangman.Add(pictureBox);
                 }
             }
-            foreach(PictureBox pictureBox in Hangman)
+            foreach (PictureBox pictureBox in Hangman)
             {
-                pictureBox.Visible=false;
+                pictureBox.Visible = false;
             } //hides the picture boxes on start
 
             //top row of keyboard
@@ -120,14 +116,7 @@ namespace Hangman_exam
                 button.Visible = false;
             }
         }
-        private void btnStart_Click(object sender, EventArgs e) //when the start button is pressed
-        {
-            string[] lines = File.ReadAllLines(path);
-            RemoveAllPlaceHolders();
-            RandomWord(lines);
-            GenerateLabelsForRandomWord();
-            btnStart.Enabled = false;
-        }
+
 
         private void RandomWord(string[] lines)
         {
@@ -160,7 +149,7 @@ namespace Hangman_exam
                     if (randomWord[i] == check)
                     {
                         PlaceHoldersToChange[i].Text = letter;
-                    }           
+                    }
                 }
                 for (int i = 0; i < randomWord.Length; i++) //checks if the placeholder doesn't equal what it use to be 
                 {
@@ -175,7 +164,7 @@ namespace Hangman_exam
                     RemoveAllPlaceHolders();
                     RandomWord(lines);
                     GenerateLabelsForRandomWord();
-                    Reset++;
+                    Reset = true;
                     score++;
                     label2.Text = "Score - " + score;
 
@@ -191,23 +180,30 @@ namespace Hangman_exam
                             break;
 
                         case 2:
-                            picTop.Visible = false;
+                            picSupport.Visible = false;
                             break;
 
                         case 3:
-                            picHead.Visible = false;
+                            picTop.Visible = false;
+
                             break;
 
                         case 4:
-                            picBody.Visible = false;
+                            picHead.Visible = false;
                             break;
 
                         case 5:
-                            picArms.Visible = false;
+                            picBody.Visible = false;
                             break;
 
                         case 6:
+                            picArms.Visible = false;
+
+                            break;
+
+                        case 7:
                             picLegs.Visible = false;
+
                             break;
                     }
                 }
@@ -231,58 +227,73 @@ namespace Hangman_exam
                         break;
 
                     case 3:
-                        picTop.Visible = true;
+                        picSupport.Visible = true;
                         picStand.Visible = true;
                         picBase.Visible = true;
                         break;
 
                     case 4:
-                        picHead.Visible = true;
                         picTop.Visible = true;
                         picStand.Visible = true;
                         picBase.Visible = true;
+                        picSupport.Visible = true;
+
                         break;
 
                     case 5:
-                        picBody.Visible = true;
                         picHead.Visible = true;
                         picTop.Visible = true;
                         picStand.Visible = true;
                         picBase.Visible = true;
+                        picSupport.Visible = true;
+
                         break;
 
                     case 6:
-                        picArms.Visible = true;
                         picBody.Visible = true;
                         picHead.Visible = true;
                         picTop.Visible = true;
                         picStand.Visible = true;
                         picBase.Visible = true;
+                        picSupport.Visible = true;
+
                         break;
 
                     case 7:
-                        picLegs.Visible = true;
                         picArms.Visible = true;
                         picBody.Visible = true;
                         picHead.Visible = true;
                         picTop.Visible = true;
                         picStand.Visible = true;
                         picBase.Visible = true;
+                        picSupport.Visible = true;
+                        break;
+
+                    case 8:
+                        fail = true;
+                        picArms.Visible = true;
+                        picBody.Visible = true;
+                        picHead.Visible = true;
+                        picTop.Visible = true;
+                        picStand.Visible = true;
+                        picBase.Visible = true;
+                        picSupport.Visible = true;
+                        picLegs.Visible = true;
                         fail = true;
                         break;
                 }
                 if (fail == true) //game end screen checks if the player failed and asks if they want to play again
                 {
                     //DialogResult allows the user to select two different options when completeing a challenge
-                    DialogResult dr = MessageBox.Show("You lasted the longest with a score of  " + score + " well done your score is saved to an external file, Play again?", ":) i see you", MessageBoxButtons.YesNo);
-                    
+                    DialogResult dr = MessageBox.Show("You lasted the longest with a score of " + score + " Well done your score is saved to an external file, Play again?", "the word was " + randomWord, MessageBoxButtons.YesNo);
+
                     switch (dr)
                     {
                         case DialogResult.Yes: //if yes the program will reset it's self
                             MessageBox.Show("alright have fun");
                             FileStream AgainFS = new FileStream(SCORE, FileMode.Append);
                             StreamWriter AgainSW = new StreamWriter(AgainFS);
-                            AgainSW.WriteLine("PLAYER -" + name + " SCORE - " + score);
+                            AgainSW.WriteLine("PLAYER - " + name + " SCORE - " + score);
                             AgainSW.Close();
                             AgainFS.Close();
                             Application.Restart();
@@ -292,17 +303,16 @@ namespace Hangman_exam
                             MessageBox.Show("goodbye :)");
                             FileStream EndFS = new FileStream(SCORE, FileMode.Append);
                             StreamWriter EndSW = new StreamWriter(EndFS);
-                            EndSW.WriteLine("PLAYER -" + name + " SCORE - " + score);
+                            EndSW.WriteLine("PLAYER - " + name + " SCORE - " + score);
                             EndSW.Close();
                             EndFS.Close();
                             Application.Exit();
                             break;
                     }
                 }
-                
-            }
 
-            if (Reset == 1) //resetes the buttons and makes sure that they are enabled after the correct word is entered
+            }
+            if (Reset == true) //resetes the buttons and makes sure that they are enabled after the correct word is entered
             {
                 List<Button> buttonshow = new List<Button>(); //sets the top row of the keybaords position
                 foreach (Button Ebutton in Controls.OfType<Button>()) //This foreach loop identifies all labels that do not have empty tags and those whose tags are assigned to the keyboard on screen
@@ -326,9 +336,8 @@ namespace Hangman_exam
                     Ebutton.Enabled = true;
                     Ebutton.BackColor = Color.White;
                 }
-                Reset = 0;
+                Reset = false;
             }
-
         }
         private void RemoveAllPlaceHolders()
         {
@@ -366,20 +375,12 @@ namespace Hangman_exam
                 this.Controls.Add(labels[i]);
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnLaunch_Click(object sender, EventArgs e)
         {
-            btnStart.Show();
+            string[] lines = File.ReadAllLines(path);
+            RemoveAllPlaceHolders();
+            RandomWord(lines);
+            GenerateLabelsForRandomWord();
             btnLaunch.Hide();
             List<Button> buttonshow = new List<Button>(); //sets the top row of the keybaords position
             foreach (Button button in Controls.OfType<Button>()) //This foreach loop identifies all labels that do not have empty tags and those whose tags are assigned to the keyboard on screen
@@ -405,4 +406,3 @@ namespace Hangman_exam
 
         }
     }
-}
